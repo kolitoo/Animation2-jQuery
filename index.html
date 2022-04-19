@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="02-animate.css">
+    <title>02-animate</title>
+</head>
+<body>
+    
+
+
+    <fieldset>
+        <legend>Portfolio</legend>
+        <ul class="hover_block">
+            <li><a href=""><img src="img/image1.jpg" alt="">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+            <li><a href=""><img src="img/image2.jpg" alt="">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+            <li><a href=""><img src="img/image3.jpg" alt="">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+            <li><a href=""><img src="img/image4.jpg" alt="">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+            <li><a href=""><img src="img/image5.jpg" alt="">1. Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+        </ul>
+    </fieldset>
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+
+$(document).ready(function() {
+
+    $('ul.hover_block li').hover(function() {
+
+        $(this).find('img').animate({opacity: 0.1}, {queue: false, duration: 200 });
+    }, function() {
+        $(this).find('img').animate({opacity: 1}, {queue: false, duration: 300});
+    })
+})
+    </script>
+</body>
+</html>
